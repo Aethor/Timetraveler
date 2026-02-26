@@ -181,6 +181,7 @@ class Tester(object):
             import pathlib
             import pickle
             dirname = os.path.join(pathlib.Path().resolve(), 'results' )
+            os.makedirs(dirname, exist_ok=True)
 
             logname = 'titer' + '-' + dataset_name + '-' + singleormultistep + '-' + setting
             eval_paper_authorsfilename = os.path.join(dirname, logname + ".pkl")
